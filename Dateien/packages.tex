@@ -6,10 +6,10 @@
 \geometry{ 
 					 top         = 20 mm,     % Rand unten
 					 bottom      = 20 mm,     % Rand unten
-           inner       = 20 mm,     % Rand links (innen bei "twoside")
-           outer       = 20 mm,     % Rand rechts (außen bei "twoside")
-           footskip    =  2 mm,     % Abstand Unterkante Text bis Unterkante Fußzeile
-           headsep     =  5 mm      % Abstand Unterkante Kopfzeile bis Oberkante Text
+					 left        = 20 mm,     % Rand links
+					 right       = 20 mm,     % Rand rechts
+           footskip    = 10 mm,     % Abstand Unterkante Text bis Unterkante Fußzeile
+           headsep     =  0 mm      % Abstand Unterkante Kopfzeile bis Oberkante Text
 					}
 %
 \setlength\parindent{0pt}
@@ -36,3 +36,6 @@
 \usepackage{fancyhdr} % Fuß und Kopfzeilen anpassen
 %
 \usepackage{lastpage} % Nummer der Seiten
+%
+\usepackage{tikz}
+\usetikzlibrary{positioning}
