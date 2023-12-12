@@ -1,0 +1,186 @@
+
+
+
+%*******************************************************************************************************************************************
+%
+% Vorlage zur Erstellung von IP-Berichten
+%
+%*******************************************************************************************************************************************
+%
+\documentclass[12pt,a4paper]{scrartcl}
+%
+\usepackage[ngerman]{babel} % Deutsche Bezeichnungen bei Inhaltsangabe etc
+\usepackage[T1]{fontenc}    % andere Schriftsatzkodierung für richtige Silbentrennung bei Umlauten
+%
+\usepackage[]{geometry}%Seitengeometrie
+\geometry{ 
+					 top         = 20 mm,     % Rand unten
+					 bottom      = 20 mm,     % Rand unten
+           inner       = 20 mm,     % Rand links (innen bei "twoside")
+           outer       = 20 mm,     % Rand rechts (außen bei "twoside")
+           footskip    =  2 mm,     % Abstand Unterkante Text bis Unterkante Fußzeile
+           headsep     =  5 mm      % Abstand Unterkante Kopfzeile bis Oberkante Text
+					}
+%
+\setlength\parindent{0pt}
+%
+\usepackage[onehalfspacing]{setspace}%Zeilenabstand
+%
+\usepackage{graphicx} % zum Einbinden von Graphiken
+%
+\usepackage{amsmath,amsthm,amssymb} % Mathematik Umgebung 
+\usepackage{icomma} % Intelligentes Komma, das den richtigen Abstand zwischen Dezimalzahlen als auch in Formeln wählt.
+%
+\usepackage[locale = DE,space-before-unit=true,per-mode = symbol]{siunitx} % Bessere Einheiten
+%%
+\usepackage{xcolor}
+\definecolor{ucbblue}{RGB}{6,13,141}
+\definecolor{ucbgreen}{RGB}{67,176,42}
+%
+\usepackage[breaklinks=true,colorlinks=true,linkcolor=ucbblue,urlcolor=ucbblue,citecolor=ucbgreen]{hyperref} % f. Referenzen
+%
+\RedeclareSectionCommand[
+  beforeskip=.5\baselineskip,
+  afterskip=.5\baselineskip]{section}
+%
+\usepackage[]{natbib} 
+%
+%*******************************************************************************************************************************************
+\begin{document}
+%
+\titlehead{\includegraphics[width=0.9\textwidth]{Bilder//Logo_UCB.pdf}}
+%
+\title{Titel des Berichts}
+%
+\author{
+				Mia Müller\thanks{\href{mailto:m.mueller@umwelt-campus.de}{m.mueller@umwelt-campus.de}},
+				Klaus Kleber\thanks{\href{mailto:k.kleber@umwelt-campus.de}{k.kleber@umwelt-campus.de}}
+				}
+%
+\date{\small\today}
+\publishers{\vspace{1cm} Betreuer: Dr.-Ing. Lukas Lentz}
+\maketitle
+%
+\section*{Kurzfassung}
+Die Kurzfassung (engl. Abstract) liefert eine kompakte Zusammenfassung der wesentlichen Punkte des Berichts in nicht mehr als 250 Worten. 
+Überlegen sie sich dafür, welche Informationen eine Person mit abgeschlossenem technischem Studium benötigt, um eine grundlegende Vorstellung von Ihrer Arbeit zu bekommen und entscheiden zu können, ob es sich lohnt den gesamten Bericht zu lesen.
+Dies umfasst in der Regel eine Beschreibung des Hintergrunds der bearbeiteten Frage, eine Vorstellung der verwendeten Methodik, sowie eine Darstellung der Hauptergebnisse und der Schlussfolgerungen.
+Dabei sollen die Zielsetzung und der Zweck der Arbeit klar benannt und Aufschluss darüber gegeben werden, welches spezifische Problem oder welche Fragestellung die Arbeit adressiert.
+\par
+Schreiben Sie die Kurzfassung am Ende der Arbeit, denn eventuell ist Ihnen beim Schreiben erst vollends klargeworden, was das Wesentliche der Arbeit ist bzw. welche
+Schwerpunkte Sie bei der Arbeit gesetzt haben. 
+\thispagestyle{empty}
+%
+%
+\newpage
+\tableofcontents
+\thispagestyle{empty}
+\cleardoublepage
+\pagenumbering{arabic} 
+\newpage
+%
+%
+\section{Einleitung}\label{sec:Einleitung}
+%
+In der Einleitung soll die Motivation für die Beschäftigung mit der bearbeiteten Aufgabe geklärt werden.
+Dazu sollen folgende Fragen adressiert werden:
+%
+\begin{itemize}
+\item Worum geht es in der Arbeit? 
+\item Was ist die Hauptfrage und warum ist diese interessant?
+\item Gibt es bereits Arbeiten, die sich mit dieser oder einer ähnlichen Fragestellung beschäftigt haben?
+\item Auf welchen Grundlagen kann aufgebaut werden?
+\item Was ist das Ziel der Arbeit und worin besteht der Nutzen?
+\item Welche Methode soll zur Beantwortung der Fragestellung verwendet werden?
+\end{itemize}
+%
+Im Rahmen des Studiums am Umweltcampus Birkenfeld ist sowohl in den Bachelor, als auch in den Master-Studiengängen die Bearbeitung eines Fachprojekts vorgesehen.
+Der hierfür einzuplanende Arbeitsaufwand beträgt \SI{150}{\hour} und die Note und Leistungspunkte werden auf Grundlage eines schriftlichen Berichts und einer mündlichen Präsentation vergeben \cite{modulhandbuch}.
+\par
+Da die Anforderungen an wissenschaftliche Berichte sich in weiten Teilen von der Art und Weise, in welcher Alltagsliteratur wie z.B. Zeitungen, Sachbücher und Romane geschrieben sind unterscheiden, muss das wissenschaftliche Schreiben zumeist erst erlernt werden. 
+Insbesondere in der frühen Studienphase ist davon auszugehen, dass die Studierenden hierbei Unterstüzung benötigen.
+\par
+Eine wichtige Frage die sich daraus für das Lehrpersonal an Hochschulen ergibt, ist wie die Studierenden beim erlernen des wissenschaftlichen Schreibens optimal unterstützt werden können.
+Aus der großen Menge der bereits zur Verfügung stehenden Hilfsmittel wird der sehr fundierten und umfangreichen Ratgeber \cite{teHeesen} sowie die kompaktere und ebenfalls sehr gute Zusammenfassung \cite{Rumpler} empfohlen.
+\par 
+Ausgehend von diesen beiden Arbeiten soll in dem vorliegenden Dokument lediglich der erwartete Aufbau eines Projektberichts skizziert werden.
+Hierdurch sollen zwei Ziele erreicht werden.
+Einerseits soll eine Hilfestellung für die Anfertigung von wissenschaftlichen Arbeiten geben, und andererseits die spezifischen Bewertungskriterien von Dr.-Ing. Lentz transparent gemacht werden.
+\par
+Um dies zu erreichen wurde der erwartete Aufbau eines Projektberichts im vorliegenden Dokument umgesetzt.  
+Zu Beginn eines jeden Abschnittes findet sich zuerst eine Auflistung der Punkte, die in diesem Abschnitt behandelt werden sollen und
+im Anschluss daran wird eine 
+
+
+
+
+
+
+%
+\newpage
+\section{Methodik}\label{sec:Methodik}
+%
+Hier soll die Methode, welche zur Beantwortung der Fragestellung eingesetzt wird, ausführlich beschrieben werden.
+Üblicherweise werden dazu folgende Themen behandelt:
+%
+\begin{itemize}
+\item Festlegen von Bezeichnungen und Abbkürzungen 
+\item Angabe der relevanten Formeln 
+\item Beschreibung der verwendeten Software 
+\item Beschreibung der verwendeten Programmiersprachen und Bibliotheken
+\item Darstellung des Vorgehens mittels eines Flussdiagramms
+\end{itemize}
+%
+%
+\newpage
+\section{Messaufbau}\label{sec:ExpAufb}
+%
+\textit{Was würde jemand brauchen, um den Versuch nachzuvollziehen und zu wiederholen?}\\
+Als Beispiel für eine Gleichung ist hier die Formel für das Verhalten eines verkippbaren Interferenz-Filters angegeben. Dabei verschiebt sich die Wellenlänge $\lambda\left(\Phi\right)$ der Filterkante bei größeren Winkeln $\Phi$, unabhängig von der Kipp"=Richtung, zu kürzeren Wellenlängen~\cite{TiltFilter}:
+\begin{equation}
+\lambda\left(\Phi\right)=\lambda\left(0\right)\sqrt{1-\frac{\sin^2\Phi}{n_\text{eff}^2}}\;.
+\label{eq:TiltWel}
+\end{equation}
+$n_\text{eff}$ ist der effektive Brechungsindex.
+%
+\newpage
+\section{Ergebnisse}
+\label{sec:Ergebnisse}
+%
+\textit{Was ist(sind) die gemessene Antwort(en) auf die Hauptfrage(n)?}\\
+Abbildung \ref{fig:examplfig} zeigt ein Beispiel für eine Abbildung in Haupttext.
+\begin{figure}[htb!]
+ \centering
+ %\includegraphics[width=0.65\textwidth]{good_example_plot}
+ \caption{\label{fig:examplfig}Ein typischer Graph in einem Bericht. Im Bildunterschrift werden die wesentliche Informationen über den Graph gegeben.
+ }
+\end{figure}
+%
+\section{Schlussfolgerungen}
+\label{sec:Schlussf}
+%
+\textit{Was ist die Endantwort und soll ihr vertraut werden?  Wie hätte man den Versuch anders oder besser durchführen können?}\\
+Die Referenz~\cite{GP1StromSpannung} soll ein Beispiel sein, wie man ein Praktikums"=Skript zitieren sollte. 
+%
+%\input{Anhang} % Der Anhang ist in einer externen Datei "Anhang.tex" und wird hier in das Dokument eingefügt.
+
+\section*{Erklärung}
+
+Hiermit versichern wir, dass der vorliegende Bericht selbständig verfasst wurde und alle notwendigen Quellen und Referenzen angegeben sind.
+
+\begin{tabular}{@{}p{2.5in}p{2.5in}@{}}
+ \\[5\bigskipamount]
+  \dotfill & \dotfill \\
+  Student 1 & Date \\[5\bigskipamount]
+  \dotfill & \dotfill \\
+ Student 2 & Date \\
+  \centering
+  
+\end{tabular}
+
+%
+\bibliographystyle{plainnat}
+\addcontentsline{toc}{section}{Literaturverzeichnis}
+\bibliography{Literatur.bib}%
+%
+\end{document}
